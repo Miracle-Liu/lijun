@@ -3,16 +3,19 @@
 
     <Head />
     <AboutUs />
+    <QualityGoods />
   </div>
 </template>
 <script>
 import Head from '@/components/Head.vue'
 import AboutUs from '@/components/AboutUs.vue'
+import QualityGoods from '@/components/QualityGoods.vue'
 export default {
   name: "layout",
   components:{
     Head,
-    AboutUs
+    AboutUs,
+    QualityGoods
   },
   data() {
     return {
