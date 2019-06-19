@@ -1,6 +1,6 @@
 <!-- 了解我们导航card -->
 <template>
-  <div class='about-us-item'>
+  <div class='know-us-item'>
     <img :src="icon" alt="" class="icon">
     <div class="text">{{text}}</div>
   </div>
@@ -28,7 +28,7 @@ created() {
 </script>
 <style lang='scss'>
 //@import url(); 引入公共css类
-.about-us-item {
+.know-us-item {
   width: 280px;
   height: 280px;
   display: flex;

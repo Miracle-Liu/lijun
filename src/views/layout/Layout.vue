@@ -2,20 +2,27 @@
   <div class="lijun-layout">
 
     <Head />
-    <AboutUs />
+    <Banner />
+    <KnowUs />
     <QualityGoods />
+    <AboutUs />
+    asdasdasdsad
   </div>
 </template>
 <script>
 import Head from '@/components/Head.vue'
-import AboutUs from '@/components/AboutUs.vue'
+import KnowUs from '@/components/KnowUs.vue'
 import QualityGoods from '@/components/QualityGoods.vue'
+import Banner from '@/components/Banner.vue'
+import AboutUs from '@/components/AboutUs.vue'
 export default {
   name: "layout",
   components:{
     Head,
-    AboutUs,
-    QualityGoods
+    KnowUs,
+    QualityGoods,
+    Banner,
+    AboutUs
   },
   data() {
     return {
