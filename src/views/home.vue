@@ -25,6 +25,19 @@ export default {
   },
   created() {
   },
+  mounted(){
+    let url = location.href;
+    let reg = /['knowUs','qualityGoods']/;
+    let res =  url.match(reg)
+    if(reg.test(url)){
+     let id =  url.split('#')[1].substr(1)
+     this.$nextTick(()=>{
+      document.querySelector(`#${id}`).scrollIntoView()
+     })
+    }
+
+
+  },
   methods: {
   }
 };

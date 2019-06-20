@@ -1,7 +1,7 @@
 <template>
   <div class="lijun-layout">
 
-    <Head id="homePage" />
+    <Head id="home" />
     <router-view class="lijun-content" />
     <Footer id="connectUs" />
   </div>
@@ -23,13 +23,15 @@ export default {
   created() {
   },
   methods: {
+
   }
 };
 </script>
 <style lang="scss">
 .lijun-layout {
+  height: 100%;
   .lijun-content {
-    min-height: calc(100% - 400px);
+    min-height: calc(100% - 730px);
   }
 }
 </style>

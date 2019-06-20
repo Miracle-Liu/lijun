@@ -41,7 +41,7 @@ return {
   logo:logo,
   selectedIndex:0,
   navList:[
-    {name:"首页",pos:'#homePage'},
+    {name:"首页",pos:'#home'},
     {name:"了解我们",pos:'#knowUs'},
     {name:"优质商品",pos:'#qualityGoods'},
     {name:"阿里巴巴",pos:'#aLi'},
@@ -54,11 +54,13 @@ watch: {},
 methods: {
   jumper(index,pos){
     this.selectedIndex = index;
-    if(pos ==='#aLi'){
-      window.open('https://lijunchina.en.alibaba.com')
-      return false
-    }else{
-      this.$router.push({path:'/'})
+    if(pos !=='#connectUs'){
+      if(pos ==='#aLi'){
+        window.open('https://lijunchina.en.alibaba.com')
+        return false
+      }else{
+        this.$router.push({path:'/'})
+      }
     }
   }
 },
