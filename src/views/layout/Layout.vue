@@ -6,7 +6,7 @@
     <KnowUs />
     <QualityGoods />
     <AboutUs />
-    asdasdasdsad
+    <Footer></Footer>
   </div>
 </template>
 <script>
@@ -15,6 +15,8 @@ import KnowUs from '@/components/KnowUs.vue'
 import QualityGoods from '@/components/QualityGoods.vue'
 import Banner from '@/components/Banner.vue'
 import AboutUs from '@/components/AboutUs.vue'
+import Footer from '@/components/Footer.vue'
+
 export default {
   name: "layout",
   components:{
@@ -22,7 +24,8 @@ export default {
     KnowUs,
     QualityGoods,
     Banner,
-    AboutUs
+    AboutUs,
+    Footer
   },
   data() {
     return {
