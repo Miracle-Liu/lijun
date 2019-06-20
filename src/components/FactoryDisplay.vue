@@ -2,13 +2,17 @@
 <template>
   <div class='factory-display-container'>
     <img :src="poster" alt="" class="poster">
+    <VideoActionBtn class="video-action-btn" />
   </div>
 </template>
 
 <script>
 import about_tu from '@/static/images/about_tu.png'
+import VideoActionBtn from '@/components/VideoActionBtn.vue'
 export default {
-components: {},
+components: {
+  VideoActionBtn
+},
 props: {},
 data() {
 return {
@@ -33,10 +37,18 @@ created() {
   margin: 0 auto;
   padding: 20px;
   background-color: #9ac5d6;
+  position: relative;
   .poster {
     width: 100%;
     height: 100%;
     display: block;
+  }
+  .video-action-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>

@@ -63,7 +63,7 @@ created() {
     top: 50%;
     right: -70px;
     transform: translate(100%, -50%);
-    z-index: 9999;
+    z-index: 1000;
     .bg-text {
       color: #ffffff;
     }
