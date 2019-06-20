@@ -1,10 +1,11 @@
 <template>
   <div class="lijun-layout">
 
-    <Head />
+    <Head id="homePage" />
+
     <Banner />
-    <KnowUs />
-    <QualityGoods />
+    <KnowUs id="knowUs" />
+    <QualityGoods id="qualityGoods" />
     <AboutUs />
     <Footer></Footer>
   </div>
