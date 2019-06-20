@@ -56,6 +56,7 @@ created() {
   .left-img,
   .right-img {
     width: 100%;
+    display: block;
   }
   .auout-us-text {
     position: absolute;

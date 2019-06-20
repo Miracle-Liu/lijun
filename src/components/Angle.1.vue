@@ -35,13 +35,13 @@ watch: {},
 methods: {
   init(){
     let angle = this.$refs.angle
-    let height = parseInt(this.height)
+    let height = parseInt(this.height)/2
     let width = height/2
     let color = this.backgroundColor
     if(this.type ==='end'){
-      angle.style.cssText = `width: ${width}px ;height:${height}px;background-image: linear-gradient(to bottom right,${color} 50%,transparent 50%);`
+      angle.style.cssText = `border-color: ${color} transparent transparent ${color};border-width: ${height}px ${width}px ${height}px ${width}px;border-style: solid;`
     }else{
-      angle.style.cssText = `width: ${width}px ;height:${height}px;background-image: linear-gradient(to bottom right,transparent 50%,${color} 50%);`
+        angle.style.cssText = `border-color:  transparent ${color} ${color} transparent ;border-width: ${height}px ${width}px ${height}px ${width}px;border-style: solid;`
     }
   }
 },
@@ -55,6 +55,7 @@ mounted(){
 <style lang='scss'>
 //@import url(); 引入公共css类
 .angle-container {
-  display: inline-block;
+  height: 0;
+  width: 0;
 }
 </style>
