@@ -20,7 +20,7 @@
           <span class="lang" :class="{active:lang ==='en'}" @click="lang='en'">English</span>
         </div>
         <div class="r-b-box">
-          <a class="pos" :href="item.pos" v-for="(item,index) in navList" :key="index" :class="{active:selectedIndex === index}" @click="jumper(index,item.pos)">{{item.name}}</a>
+          <a class="pos" :href="item.pos" v-for="(item,index) in navList" :key="index" :class="{active:selectedIndex === index,en:lang ==='en'}" @click="jumper(index,item.pos)">{{$t(item.name)}}</a>
         </div>
       </div>
     </div>
@@ -41,16 +41,26 @@ return {
   logo:logo,
   selectedIndex:0,
   navList:[
-    {name:"首页",pos:'#home'},
-    {name:"了解我们",pos:'#knowUs'},
-    {name:"优质商品",pos:'#qualityGoods'},
-    {name:"阿里巴巴",pos:'#aLi'},
-    {name:"联系我们",pos:'#connectUs'},
+    {name:"header.home",pos:'#home'},
+    {name:"header.knowUs",pos:'#knowUs'},
+    {name:"header.qualitGoods",pos:'#qualityGoods'},
+    {name:"header.alibaba",pos:'#aLi'},
+    {name:"header.contactUs",pos:'#connectUs'},
   ]
 };
 },
 computed: {},
-watch: {},
+watch:{
+  $route(val){
+    let {path} = val
+    if(path =='/' || path =="/questions" || path=="/download"){
+      this.selectedIndex = 0
+    }
+  },
+  lang(val){
+    this.$i18n.locale = val;
+  }
+},
 methods: {
   jumper(index,pos){
     this.selectedIndex = index;
@@ -64,16 +74,9 @@ methods: {
     }
   }
 },
-watch:{
-  $route(val){
-    let {path} = val
-    if(path =='/' || path =="/questions" || path=="/download"){
-      this.selectedIndex = 0
-    }
-  }
-},
-created() {
 
+created() {
+  this.lang = this.$i18n.locale;
 },
 }
 </script>
@@ -163,6 +166,12 @@ created() {
           margin-right: 90px;
           &:last-of-type {
             margin: 0;
+          }
+          &.en {
+            margin-right: 80px;
+            &:last-of-type {
+              margin: 0;
+            }
           }
         }
       }

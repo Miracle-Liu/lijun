@@ -7,6 +7,17 @@
 <script>
 export default {
   name: "App",
+  created() {
+    const lang = navigator.systemLanguage
+      ? navigator.systemLanguage
+      : navigator.language;
+    const lan = lang.substr(0, 2);
+    if (lan === "zh") {
+      this.$i18n.locale = "cn";
+    } else {
+      this.$i18n.locale = "en";
+    }
+  },
 };
 </script>
 

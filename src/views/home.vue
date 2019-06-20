@@ -35,8 +35,6 @@ export default {
       document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" })
      })
     }
-
-
   },
   methods: {
   }

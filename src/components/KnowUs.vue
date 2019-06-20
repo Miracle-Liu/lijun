@@ -2,9 +2,9 @@
 <template>
   <div class='lijun-know-us'>
     <div class="container">
-      <ModuleTitle bg-text="KNOW ABOUT US" title="了解我们" />
+      <ModuleTitle bg-text="KNOW ABOUT US" :title="$t('knowUs.title')" />
       <div class="nav">
-        <KnowUsItem class="item" v-for="(item,index) in navList" :key="index" :icon="item.icon" :text="item.text" />
+        <KnowUsItem class="item" v-for="(item,index) in navList" :key="index" :icon="item.icon" :text="$t(`knowUs.${item.text}`)" />
       </div>
     </div>
     <div class="content">
@@ -31,10 +31,10 @@ props: {},
 data() {
 return {
     navList:[
-      {icon:icon1,text:"车间展示"},
-      {icon:icon2,text:"员工介绍"},
-      {icon:icon3,text:"客户来访"},
-      {icon:icon4,text:"企业资质"},
+      {icon:icon1,text:"cjzs"},
+      {icon:icon2,text:"ygjs"},
+      {icon:icon3,text:"khlf"},
+      {icon:icon4,text:"qyzz"},
       ]
 };
 },

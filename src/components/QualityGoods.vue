@@ -2,13 +2,13 @@
 <template>
   <div class='quality-goods-container'>
     <div class="container">
-      <ModuleTitle bg-text="QUALITY GOODS" title="优质产品" />
-      <div class="description">我们主打产品包括口罩，帽子，防护服，隔离衣，手术衣，鞋套，袖套，手套，床单等。</div>
+      <ModuleTitle bg-text="QUALITY GOODS" :title="$t('highP.title')" />
+      <div class="description">{{$t('highP.slogan')}}</div>
       <div class="goods-list">
-        <GoodsItem class="goods-item" v-for="(item,index) in goodsList" :key="index" :img="item.img" :title="item.title" />
+        <GoodsItem class="goods-item" v-for="(item,index) in goodsList" :key="index" :img="item.img" :title="$t(`highP.${item.title}`)" @click.native="jumpGoodsInfo(item.href)" />
       </div>
-      <div class="all-goods-btn">
-        所有产品
+      <div class="all-goods-btn" @click="jumpAllGoods">
+        {{$t('highP.sycp')}}
       </div>
     </div>
   </div>
@@ -35,22 +35,27 @@ props: {},
 data() {
 return {
   goodsList:[
-    {img:goods1,title:'防化服'},
-    {img:goods2,title:'外科礼服'},
-    {img:goods3,title:'隔离衣'},
-    {img:goods4,title:'圆帽'},
-    {img:goods5,title:'口罩'},
-    {img:goods6,title:'鞋套'},
-    {img:goods7,title:'防化服'},
-    {img:goods8,title:'隔离衣'},
-    {img:goods9,title:'鞋套'},
+    {img:goods1,title:'fhf',href:'https://lijunchina.en.alibaba.com/productgrouplist-209714929/Protective_Suit.html?spm=a2700.icbuShop.74.2.221fbd1alQbcFk'},
+    {img:goods2,title:'wklf',href:"https://lijunchina.en.alibaba.com/productgrouplist-209761250/Surgical_Gown.html?spm=a2700.icbuShop.74.3.221fbd1alQbcFk"},
+    {img:goods3,title:'gly',href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
+    {img:goods4,title:'ym',href:"https://lijunchina.en.alibaba.com/productgrouplist-221938712/Disposable_Cap.html?spm=a2700.icbuShop.74.18.221fbd1alQbcFk"},
+    {img:goods5,title:'kz',href:"https://lijunchina.en.alibaba.com/productgrouplist-221936750/Disposable_Face_Mask.html?spm=a2700.icbuShop.74.19.221fbd1alQbcFk"},
+    {img:goods6,title:'xt',href:"https://lijunchina.en.alibaba.com/productgrouplist-221837001/Disposable_Shoe_Cover.html?spm=a2700.icbuShop.74.20.221fbd1alQbcFk"},
+    {img:goods7,title:'fhf',href:'https://lijunchina.en.alibaba.com/productgrouplist-209714929/Protective_Suit.html?spm=a2700.icbuShop.74.2.221fbd1alQbcFk'},
+    {img:goods8,title:'gly',href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
+    {img:goods9,title:'gly',href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
   ]
 };
 },
 computed: {},
 watch: {},
 methods: {
-
+  jumpGoodsInfo(href){
+    window.open(href)
+  },
+  jumpAllGoods(){
+    window.open('https://lijunchina.en.alibaba.com')
+  }
 },
 created() {
 
@@ -70,6 +75,7 @@ created() {
     margin-top: 60px;
     overflow: hidden;
     .goods-item {
+      cursor: pointer;
       float: left;
       margin-bottom: 20px;
       & + .goods-item {
