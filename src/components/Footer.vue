@@ -57,7 +57,7 @@ export default {
         return {
             topLists:[
             {item:item1,text:"027-83928188"},
-            {item:item2,text:"027-83928188"},
+            {item:item2,text:"julie@xtlijun.com"},
             {item:item3,text:"027-83928188"},
             ],
             usList:['FAQ','下载'],

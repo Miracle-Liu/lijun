@@ -32,7 +32,7 @@ export default {
     if(reg.test(url)){
      let id =  url.split('#')[1].substr(1)
      this.$nextTick(()=>{
-      document.querySelector(`#${id}`).scrollIntoView()
+      document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" })
      })
     }
 
