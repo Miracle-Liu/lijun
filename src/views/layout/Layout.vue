@@ -2,15 +2,13 @@
   <div class="lijun-layout">
 
     <Head id="homePage" />
-
     <Banner />
     <KnowUs id="knowUs" />
     <QualityGoods id="qualityGoods" />
     <AboutUs />
-
     <Questions />
     <Download />
-
+    <Footer id="connectUs" />
   </div>
 </template>
 <script>
@@ -21,6 +19,8 @@ import Banner from '@/components/Banner.vue'
 import AboutUs from '@/components/AboutUs.vue'
 import Questions from '@/components/Questions.vue'
 import Download from '@/components/Download.vue'
+import Footer from '@/components/Footer.vue'
+
 export default {
   name: "layout",
   components:{
@@ -30,7 +30,8 @@ export default {
     Banner,
     AboutUs,
     Questions,
-    Download
+    Download,
+    Footer
   },
   data() {
     return {
