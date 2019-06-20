@@ -20,7 +20,7 @@
           <span class="lang" :class="{active:lang ==='en'}" @click="lang='en'">English</span>
         </div>
         <div class="r-b-box">
-          <a class="pos" :href="item.pos" v-for="(item,index) in navList" :key="index" :class="{active:selectedIndex === index}" @click="jumper(index)">{{item.name}}</a>
+          <a class="pos" :href="item.pos" v-for="(item,index) in navList" :key="index" :class="{active:selectedIndex === index}" @click="jumper(index,item.pos)">{{item.name}}</a>
         </div>
       </div>
     </div>
@@ -52,8 +52,22 @@ return {
 computed: {},
 watch: {},
 methods: {
-  jumper(index){
+  jumper(index,pos){
     this.selectedIndex = index;
+    if(pos ==='#aLi'){
+      window.open('https://lijunchina.en.alibaba.com')
+      return false
+    }else{
+      this.$router.push({path:'/'})
+    }
+  }
+},
+watch:{
+  $route(val){
+    let {path} = val
+    if(path =='/' || path =="/questions" || path=="/download"){
+      this.selectedIndex = 0
+    }
   }
 },
 created() {
