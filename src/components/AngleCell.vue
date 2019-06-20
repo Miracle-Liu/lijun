@@ -1,6 +1,6 @@
 <!-- 尖角容器 -->
 <template>
-  <div class='angle-cell-container' :style="{height,width,backgroundColor}">
+  <div class='angle-cell-container' :style="{height,backgroundColor}">
     <slot></slot>
     <Angle :type="anglePos" :height="height" class="angle" ref="angle" :class="[anglePos]" :background-color="backgroundColor" />
   </div>
@@ -17,11 +17,6 @@ props: {
   height:{
     type:[String,Number],
     default:'100px'
-  },
-  //容器宽度
-  width:{
-    type:String,
-    default:'100%'
   },
   //容器背景颜色
   backgroundColor:{
@@ -66,6 +61,7 @@ mounted(){
 .angle-cell-container {
   position: relative;
   display: inline-block;
+  width: 100%;
   .angle {
     position: absolute;
     top: 0;
