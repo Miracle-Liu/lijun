@@ -75,7 +75,7 @@ export default {
             topLists:[
             {item:item1,text:"027-83928188"},
             {item:item2,text:"julie@xtlijun.com"},
-            {item:item3,text:"027-83928188"},
+            {item:item3,text:"0728-2612597"},
             ],
             usList:[
               {name:'aboutUs.faq',href:'/questions'},

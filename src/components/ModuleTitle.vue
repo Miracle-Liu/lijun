@@ -32,16 +32,15 @@ created() {
 //@import url(); 引入公共css类
 .module-title-container {
   .bg-text {
-    color: #bfdae6;
+    color: rgba(191, 218, 230, 0.3);
     font-size: 48px;
     font-weight: bold;
-    opacity: 0.3;
   }
   .title-text {
     font-weight: 500;
     color: #000;
     font-size: 36px;
-    margin-top: -27px;
+    margin-top: -33px;
   }
 }
 </style>

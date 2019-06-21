@@ -78,7 +78,7 @@ created() {
     transform: translate(100%, -50%);
     z-index: 1000;
     .bg-text {
-      color: #ffffff;
+      color: rgba(255, 255, 255, 0.2);
     }
     .line {
       width: 34px;
@@ -117,11 +117,13 @@ created() {
       width: 144px;
       height: 40px;
       background: rgba(21, 148, 199, 1);
-      margin-top: 20px;
       line-height: 40px;
       color: #ffffff;
       text-align: center;
       cursor: pointer;
+      position: absolute;
+      top: 22px;
+      right: 0;
     }
   }
 }
