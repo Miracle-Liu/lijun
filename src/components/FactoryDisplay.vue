@@ -1,22 +1,25 @@
 <!-- 车间展示内容 -->
 <template>
   <div class='factory-display-container'>
-    <img :src="poster" alt="" class="poster">
-    <VideoActionBtn class="video-action-btn" />
+    <video controls class="poster">
+      <source src="http://www.xtlijun.com/images/company.mp4">
+    </video>
+    <!-- <img :src="poster" alt="" class="poster">
+    <VideoActionBtn class="video-action-btn" /> -->
   </div>
 </template>
 
 <script>
-import about_tu from '@/static/images/about_tu.png'
-import VideoActionBtn from '@/components/VideoActionBtn.vue'
+// import about_tu from '@/static/images/about_tu.png'
+// import VideoActionBtn from '@/components/VideoActionBtn.vue'
 export default {
 components: {
-  VideoActionBtn
+  // VideoActionBtn
 },
 props: {},
 data() {
 return {
-  poster:about_tu
+  // poster:about_tu
 };
 },
 computed: {},

@@ -4,6 +4,7 @@
     <Head />
     <router-view class="lijun-content" />
     <Footer id="connectUs" />
+    <modals-container />
   </div>
 </template>
 <script>
@@ -32,6 +33,22 @@ export default {
   height: 100%;
   .lijun-content {
     min-height: calc(100% - 730px);
+  }
+  .slick-dots li button::before {
+    color: #fff;
+  }
+  .slick-dots li.slick-active button::before {
+    color: #0092fe;
+  }
+  .v--modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .v--modal-box {
+    width: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: inherit !important;
+    z-index: 100000;
   }
 }
 </style>

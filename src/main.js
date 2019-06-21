@@ -1,18 +1,17 @@
 import Vue from 'vue'
 
 import 'normalize.css/normalize.css'
-import Element from 'element-ui'
-import '@/styles/element-variables.scss'
-
 import App from './App'
 import router from './router'
 import store from './store'
 import messages from './messages.js'
 import VueI18n from 'vue-i18n'
-
-Vue.use(Element)
-
+import vmodal from 'vue-js-modal'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+// 引入modal
 Vue.config.productionTip = false
+Vue.use(vmodal, { dynamic: true, dynamicDefaults: { clickToClose: false } })
 
 Vue.use(VueI18n)
 const i18n = new VueI18n({
