@@ -20,7 +20,7 @@
           <span class="lang" :class="{active:lang ==='en'}" @click="lang='en'">English</span>
         </div>
         <div class="r-b-box">
-          <a class="pos" :href="item.pos" v-for="(item,index) in navList" :key="index" :class="{active:selectedIndex === index,en:lang ==='en'}" @click="jumper(index,item.pos)">{{$t(item.name)}}</a>
+          <div class="pos" :href="item.pos" v-for="(item,index) in navList" :key="index" :class="{active:selectedIndex === index,en:lang ==='en'}" @click="jumper(index,item.pos)">{{$t(item.name)}}</div>
         </div>
       </div>
     </div>
@@ -41,11 +41,11 @@ return {
   logo:logo,
   selectedIndex:0,
   navList:[
-    {name:"header.home",pos:'#home'},
-    {name:"header.knowUs",pos:'#knowUs'},
-    {name:"header.qualitGoods",pos:'#qualityGoods'},
-    {name:"header.alibaba",pos:'#aLi'},
-    {name:"header.contactUs",pos:'#connectUs'},
+    {name:"header.home",pos:'home'},
+    {name:"header.knowUs",pos:'knowUs'},
+    {name:"header.qualitGoods",pos:'qualityGoods'},
+    {name:"header.alibaba",pos:'aLi'},
+    {name:"header.contactUs",pos:'connectUs'},
   ]
 };
 },
@@ -64,13 +64,16 @@ watch:{
 methods: {
   jumper(index,pos){
     this.selectedIndex = index;
-    if(pos !=='#connectUs'){
-      if(pos ==='#aLi'){
+      if(pos ==='aLi'){
         window.open('https://lijunchina.en.alibaba.com')
         return false
       }else{
-        this.$router.push({path:'/'})
-      }
+        let dom = document.querySelector(`#${pos}`)
+        if(dom){
+          dom.scrollIntoView({ behavior: "smooth" })
+        }else{
+          this.$router.push({path:'/',query:{pos}})
+        }
     }
   }
 },
@@ -154,14 +157,12 @@ created() {
       }
       .r-b-box {
         font-size: 16px;
-        .pos,
-        .pos:hover {
-          text-decoration: none;
-        }
         .pos.active {
           color: #75c2f4;
         }
         .pos {
+          display: inline-block;
+          cursor: pointer;
           color: #fff;
           margin-right: 90px;
           &:last-of-type {

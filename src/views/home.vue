@@ -26,13 +26,11 @@ export default {
   created() {
   },
   mounted(){
-    let url = location.href;
-    let reg = /['knowUs','qualityGoods']/;
-    let res =  url.match(reg)
-    if(reg.test(url)){
-     let id =  url.split('#')[1].substr(1)
+    let {pos} = this.$route.query
+    let reg = /(knowUs|qualityGoods)/;
+    if(reg.test(pos)){
      this.$nextTick(()=>{
-      document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" })
+      document.querySelector(`#${pos}`).scrollIntoView({ behavior: "smooth" })
      })
     }
   },

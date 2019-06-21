@@ -1,7 +1,7 @@
 <template>
   <div class="lijun-layout">
 
-    <Head id="home" />
+    <Head />
     <router-view class="lijun-content" />
     <Footer id="connectUs" />
   </div>

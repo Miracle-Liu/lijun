@@ -41,9 +41,22 @@ export default {
         ' 仙桃市利军无纺布制品有限公司，坐落于风景秀丽、素有“江汉明珠”之誉、中国最大无纺布制品生产基地之称的仙桃市彭场镇，距武汉仅80公里。 公司占地面积6000平方米，生产车间面积8000平方米，现有设备350多台套。是集生产、销售、贸易（有自营进出口权）为一体化的企业实体。主要生产经营出口无纺布、无纺布防护服、手术衣、工作服、床单、鞋套、袖套、圆帽、条帽、无纺布口罩、纸口罩、活性碳口罩、CPE鞋套、PE鞋套及各种式样的无纺布制品，CPE和PE制品等。产品远销日本、美国等欧洲国家，深受国内外客户的赞誉。',
       des2:
         ' 作为国内专业的无纺布制品生产企业，在规模化运作、规范化经营的发展中，利军公司秉承“造福社会、创造精彩”的企业理念，全面优化生产流程，不断开发制作实用、安全、健康的无纺布制品，为员工提供施展才华的舞台，为客户提供品质优秀的产品，为祖国经济发展奉献自己的价值。面对今天，我们努力创造；展望未来，我们满怀信心；利军人，承继着荣耀与梦想，立足于16年积累的雄厚根基之上。利军公司全体员工秉承“信誉是根本、质量是生命、服务是关键”的原则，为用户提供最优质的产品和最完善的售后服务。我公司竭诚欢迎国内国际友人来函来电洽谈合作。',
-      viewMore: '查看更多'
+      viewMore: '查看更多',
+      prePage: '上一页',
+      download: '下载',
+      faq: 'FAQ'
     },
-
+    goods: {
+      title: '产品',
+      ycxkz: '一次性口罩',
+      n95kz: 'N95防尘口罩',
+      ycxmz: '一次性帽子',
+      fhf: '防护服',
+      syf: '实验服',
+      gly: '隔离衣',
+      xt: '鞋套',
+      qt: '其它'
+    },
     footer: {
       ads: '地址',
       ads_content: '湖北省仙桃市彭场镇千秋南街138号',
@@ -102,7 +115,21 @@ export default {
         'Xiantao Lijun Non-woven Products Co.,Ltd. was established in 2003 which located in Pengchang Town, Xiantao City,the largest non-woven product base in China.Our factory covers an area of 12,000 square meters with more than 350 machines to OEM and ODM disposable face mask,coverall ,workwear, cap, surgical gown, isolation gown, shoecover.In addition, we have obtained CE, ISO13485 and FDA, NELSON certifications for non-wovnen materials and products. 90% of our products are exported to North America, Japan,Europe, South America, Russia, Middle East, South Asia etc.',
       des2:
         'In order to keep pace with the market changes, we’ve been always improving ourselves. In recently years, we have increased coverall, workwear and other workshops to meet client’s requests. And more advanced equipments had been introduced including ultrasonic sewing machine, 4-thread saw machine,automatic face mask machine, cap machine etc. We also have professional IQC, FQC team and workers to ensure us producing international standard products from the source. With more than 16 years’ experience, we always seek for high quality, long term relationship, considerate customer service. Welcome to visit our factory at any time. ',
-      viewMore: 'to view more'
+      viewMore: 'to view more',
+      prePage: 'previous page',
+      download: 'Download',
+      faq: 'FAQ'
+    },
+    goods: {
+      title: 'Goods',
+      ycxkz: 'Disposable Mask',
+      n95kz: 'N95 Mask',
+      ycxmz: 'Disposable caps',
+      fhf: 'protective suit',
+      syf: 'Lab Gown',
+      gly: 'Isolation Gown',
+      xt: 'Shoe Cover',
+      qt: 'Others'
     },
     footer: {
       ads: 'Address',

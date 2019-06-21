@@ -5,35 +5,47 @@
         <TopList class="item" v-for="(tList,index) in topLists" :key="index" :item="tList.item" :text="tList.text" />
       </div>
       <div class="bottom">
-        <div class="logo">
+        <div class="logo" :class="{en:lang==='en'}">
           <img src="../static/images/logo.png" alt="">
-          <span>仙桃市利军无纺布制品有限公司</span>
+          <span>{{$t('footer.rightReserved_content')}}</span>
         </div>
         <div class="divide"></div>
         <div class="about">
           <dl>
-            <dt class="title">关于我们</dt>
+            <dt class="title">{{$t('aboutUs.title')}}</dt>
             <dd class="line"></dd>
-            <dd v-for="list in usList" style="cursor: pointer;" @click="jumper(list)">{{list}}</dd>
+            <dd v-for="(item,index) in usList" style="cursor: pointer;" @click="jumper(item.href)">{{$t(item.name)}}</dd>
           </dl>
         </div>
         <div class="divide"></div>
         <div class="about">
           <dl>
-            <dt class="title">产品</dt>
+            <dt class="title">{{$t('goods.title')}}</dt>
             <dd class="line"></dd>
-            <dd v-for="list in goodsList" style="cursor: pointer;">{{list}}</dd>
+            <dd v-for="(item,index) in goodsList" :key="index" style="cursor: pointer;" @click="jumperGoods(item.href)">{{$t(item.name)}}</dd>
           </dl>
         </div>
         <div class="divide"></div>
-        <div class="about" style="width:auto;">
+        <div class="about address-info">
           <dl>
-            <dt class="title">联系我们</dt>
+            <dt class="title">{{$t('header.contactUs')}}</dt>
             <dd class="line"></dd>
-            <dd>地址: 湖北省仙桃市彭场镇千秋南街138号</dd>
-            <dd>阿里巴巴: <a class="ali-href" target="blank" href="https://lijunchina.en.alibaba.com">https://lijunchina.en.alibaba.com</a></dd>
-            <dd>外贸部: 湖北省武汉市江汉区后襄河北路海马中心2109</dd>
-            <dd>版权所有: 仙桃市利军无纺布制品有限公司</dd>
+            <dd>
+              <span>{{$t('footer.ads')}}:</span>
+              <span>{{$t('footer.ads_content')}}</span>
+            </dd>
+            <dd>
+              <span>{{$t('footer.alibaba')}}:</span>
+              <a class="ali-href" target="blank" href="https://lijunchina.en.alibaba.com">https://lijunchina.en.alibaba.com</a>
+            </dd>
+            <dd>
+              <span>{{$t('footer.foreignTrade')}}:</span>
+              <span>{{$t('footer.foreignTrade_content')}}</span>
+            </dd>
+            <dd>
+              <span>{{$t('footer.rightReserved')}}:</span>
+              <span>{{$t('footer.rightReserved_content')}}</span>
+            </dd>
           </dl>
         </div>
       </div>
@@ -53,6 +65,11 @@ export default {
     components:{
         TopList
     },
+    computed:{
+      lang(){
+        return this.$i18n.locale
+      }
+    },
     data() {
         return {
             topLists:[
@@ -60,19 +77,30 @@ export default {
             {item:item2,text:"julie@xtlijun.com"},
             {item:item3,text:"027-83928188"},
             ],
-            usList:['FAQ','下载'],
-            goodsList:['一次性口罩','N95防尘口罩','一次性帽子','防护服','实验服','隔离衣','鞋套','其它'],
+            usList:[
+              {name:'aboutUs.faq',href:'/questions'},
+              {name:'aboutUs.download',href:"/download"}
+            ],
+            goodsList:[
+              {name:"goods.ycxkz",href:"https://lijunchina.en.alibaba.com/productgrouplist-221936750/Disposable_Face_Mask.html?spm=a2700.icbuShop.74.19.221fbd1alQbcFk"},
+              {name:"goods.n95kz",href:"https://lijunchina.en.alibaba.com/productgrouplist-221936750/Disposable_Face_Mask.html?spm=a2700.icbuShop.74.19.221fbd1alQbcFk"},
+              {name:"goods.ycxmz",href:"https://lijunchina.en.alibaba.com/productgrouplist-221938712/Disposable_Cap.html?spm=a2700.icbuShop.74.18.221fbd1alQbcFk"},
+              {name:"goods.fhf",href:"https://lijunchina.en.alibaba.com/productgrouplist-209714929/Protective_Suit.html?spm=a2700.icbuShop.74.2.221fbd1alQbcFk"},
+              {name:"goods.syf",href:"https://lijunchina.en.alibaba.com/productgrouplist-209761250/Surgical_Gown.html?spm=a2700.icbuShop.74.3.221fbd1alQbcFk"},
+              {name:"goods.gly",href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
+              {name:"goods.xt",href:"https://lijunchina.en.alibaba.com/productgrouplist-221837001/Disposable_Shoe_Cover.html?spm=a2700.icbuShop.74.20.221fbd1alQbcFk"},
+              {name:"goods.qt",href:"'https://lijunchina.en.alibaba.com'"},
+            ],
 
 
         }
     },
     methods:{
-      jumper(adress){
-        let path = '/download'
-        if(adress ==='FAQ'){
-          path ='/questions'
-        }
-         this.$router.push({path})
+      jumper(path){
+        this.$router.push({path})
+      },
+      jumperGoods(path){
+        window.open(path)
       }
     }
 }
@@ -115,13 +143,20 @@ export default {
       margin-top: 61px;
     }
     .logo {
-      width: 224px;
+      width: 322px;
       padding-top: 61px;
       float: left;
-      margin-right: 98px;
+      &.en {
+        img {
+          margin: 0 auto;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
       img {
         display: block;
-        margin: 0 auto;
+        margin-left: 74px;
         width: 75px;
         height: 67px;
       }
@@ -141,6 +176,9 @@ export default {
       padding-left: 40px;
       padding-top: 61px;
       float: left;
+      &.address-info {
+        width: 450px;
+      }
       dl {
         margin: 0;
       }
@@ -158,12 +196,12 @@ export default {
         margin-bottom: 20px;
       }
       dd {
-        height: 22px;
         font-size: 14px;
         margin: 0px;
         font-family: PingFangSC-Medium;
         font-weight: 500;
         color: rgba(131, 137, 140, 1);
+        line-height: 22px;
       }
     }
   }
