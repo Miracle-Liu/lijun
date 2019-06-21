@@ -71,6 +71,33 @@ export default {
       hotLine: '全国热线',
       line_content_1: '027-83928188',
       line_content_2: '0728-2612597'
+    },
+    faq: {
+      commonQues: '常见问题类别',
+      myzx: '贸易咨询',
+      q1: '您是制造商还是贸易公司?',
+      a1: '我们有自己的工厂生产这种产品。',
+      q2: '运输方法怎么样?',
+      a2: '特快/航空/海运。',
+      q3: '付款方式怎么样?',
+      a3:
+        '我们接受大额的电汇、信用证，小额的，您可以通过Paypal、西联汇款、速汇金、代管等方式付款。',
+      q4: '我可以订购一些样品进行测试吗?',
+      a4:
+        '当然，我们可以安排运费到付的方式给你样品，如果不是我们正常的印刷，你需要支付样品费用。',
+      q5: '你能定制我的特殊形状的急救箱吗?',
+      a5: '是的，我们做OEM和ODM。'
+    },
+    download: {
+      title: '下载类别',
+      directory: '目录',
+      list: '下载列表',
+      th_name: '名字',
+      th_description: '介绍',
+      th_size: '大小',
+      th_downloads: '下载量',
+      th_update_time: '更新',
+      th_download: '下载'
     }
   },
   en: {
@@ -147,6 +174,33 @@ export default {
       hotLine: 'Hot line',
       line_content_1: '027-83928188',
       line_content_2: '0728-2612597'
+    },
+    faq: {
+      commonQues: 'FAQ',
+      myzx: 'Trade Consulting',
+      q1: 'Are you a manufacturer or a trading company?',
+      a1: 'We have our own factory to produce this product.',
+      q2: 'How about transportation?',
+      a2: 'Express/air/sea freight.',
+      q3: 'What about the terms of payment?',
+      a3:
+        'We accept large amount telegraphic transfer, letter of credit.For small amount, you can pay by Paypal, western union, moneygram, escrow, etc.',
+      q4: 'Can I order some samples for testing?',
+      a4:
+        'Of course, we can arrange freight collect to give you the sample, if not our normal printing, you need to pay the sample fee.',
+      q5: 'Can you customize my special shaped first aid kit?',
+      a5: 'Yes, we do OEM and ODM.'
+    },
+    download: {
+      title: 'Download Category',
+      directory: 'directory',
+      list: 'Download Lists',
+      th_name: 'name',
+      th_description: 'description',
+      th_size: 'size',
+      th_downloads: 'downloads',
+      th_update_time: 'update time',
+      th_download: 'download'
     }
   }
 }

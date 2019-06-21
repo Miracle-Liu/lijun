@@ -3,21 +3,21 @@
   <div class='questions-container'>
     <div class="container">
       <div class="l-box">
-        <div class="title">常见问题类别</div>
+        <div class="title">{{$t('faq.commonQues')}}</div>
         <div class="question" v-for="(item,index) in qesList" :key="index">
-          {{item.name}}
+          {{$t(item.name)}}
         </div>
       </div>
       <div class="r-box">
-        <div class="title">贸易咨询</div>
+        <div class="title">{{$t('faq.myzx')}}</div>
         <div class="answer" v-for="(item,index) in ansList" :key="index">
           <div class="ques">
             <div class="q">Q</div>
-            <div class="text"> {{item.ques}}</div>
+            <div class="text"> {{$t(item.ques)}}</div>
           </div>
           <div class="ans">
             <div class="a">A</div>
-            <div class="text"> {{item.ans}}</div>
+            <div class="text"> {{$t(item.ans)}}</div>
           </div>
         </div>
       </div>
@@ -33,29 +33,29 @@ props: {},
 data() {
 return {
   qesList:[
-    {name:'贸易咨询',id:1}
+    {name:'faq.myzx',id:1}
   ],
   ansList:[
     {
-      ques:'您是制造商还是贸易公司?',
-      ans:'我们有自己的工厂生产这种产品。'
+      ques:'faq.q1',
+      ans:'faq.a1'
     },
     {
-      ques:'运输方法怎么样?',
-      ans:'特快/航空/海运。'
+      ques:'faq.q2',
+      ans:'faq.a2'
     },
     {
-      ques:'付款方式怎么样?',
-      ans:'我们接受大额的电汇、信用证，小额的，您可以通过Paypal、西联汇款、速汇金、代管等方式付款。'
+      ques:'faq.q3',
+      ans:'faq.a3'
     },
     {
-      ques:'我可以订购一些样品进行测试吗?',
-      ans:'当然，我们可以安排运费到付的方式给你样品，如果不是我们正常的印刷，你需要支付样品费用。'
+      ques:'faq.q4',
+      ans:'faq.a4'
     },
     {
-      ques:'你能定制我的特殊形状的急救箱吗?',
-      ans:'是的，我们做OEM和ODM。'
-    }
+      ques:'faq.q5',
+      ans:'faq.a5'
+    },
   ]
 };
 },
@@ -129,7 +129,6 @@ created() {
         .text {
           float: left;
           white-space: normal;
-          word-break: break-all;
           word-wrap: break-word;
           width: calc(100% - 100px);
         }

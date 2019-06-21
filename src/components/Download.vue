@@ -3,28 +3,28 @@
   <div class='download-container'>
     <div class="container">
       <div class="l-box">
-        <div class="title">下载类别</div>
+        <div class="title">{{$t('download.title')}}</div>
         <div class="directory" v-for="(item,index) in directoryList" :key="index">
-          {{item.name}}
+          {{$t(item.name)}}
         </div>
       </div>
       <div class="r-box">
-        <div class="title">下载列表</div>
+        <div class="title">{{$t('download.list')}}</div>
         <table class="table">
           <thead>
-            <th>名字</th>
-            <th>介绍</th>
-            <th>大小</th>
-            <th>下载量</th>
-            <th>更新</th>
-            <th>下载</th>
+            <th>{{$t('download.th_name')}}</th>
+            <th>{{$t('download.th_description')}}</th>
+            <th>{{$t('download.th_size')}}</th>
+            <th>{{$t('download.th_downloads')}}</th>
+            <th>{{$t('download.th_update_time')}}</th>
+            <th>{{$t('download.th_download')}}</th>
           </thead>
           <tbody>
             <tr v-for="(item,index) in list" :key="index">
               <td class="file-name">{{item.name}}</td>
-              <td>{{item.des}}</td>
+              <td>{{item.description}}</td>
               <td>{{item.size}}</td>
-              <td>{{item.download_count}}</td>
+              <td>{{item.downloads}}</td>
               <td>{{item.update_time}}</td>
               <td class="download-btn">Download</td>
             </tr>
@@ -43,21 +43,14 @@ props: {},
 data() {
 return {
   directoryList:[
-    {name:'目录',id:1}
+    {name:'download.directory',id:1}
   ],
   list:[
     {
     name:"Catalog.pdf",
-    des:"Catalog of Wellmien",
+    description:"Catalog of Wellmien",
     size:"4.73MB",
-    download_count:"352",
-    update_time:"2016-12-06",
-    },
-    {
-    name:"Catalog.pdf",
-    des:"Catalog of Wellmien",
-    size:"4.73MB",
-    download_count:"352",
+    downloads:"352",
     update_time:"2016-12-06",
     },
   ]
