@@ -50,7 +50,7 @@ return {
   list:[
     {
     name:"Catalog.pdf",
-    description:"Catalog of Wellmien",
+    description:"Catalog of Xiantao Lijun",
     size:"4.73MB",
     downloads:"352",
     update_time:"2016-12-06",
