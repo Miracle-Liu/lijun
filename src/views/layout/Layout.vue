@@ -30,9 +30,11 @@ export default {
 </script>
 <style lang="scss">
 .lijun-layout {
+  width: 100%;
   height: 100%;
   .lijun-content {
     min-height: calc(100% - 730px);
+    width: 100%;
   }
   .slick-dots li button::before {
     color: #fff;

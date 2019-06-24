@@ -52,6 +52,7 @@ created() {
     left: 50%;
     color: rgba(255, 255, 255, 1);
     transform: translate(-50%, -50%);
+    padding: 0;
     .title {
       font-size: 60px;
       font-family: SourceHanSansCN-Bold;

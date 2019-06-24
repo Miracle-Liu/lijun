@@ -88,15 +88,16 @@ created() {
 .lijun-head-container {
   width: 100%;
   overflow: hidden;
+  position: relative;
   .left {
-    width: 40% !important;
+    width: 40%;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -100;
   }
   .right {
-    width: 57% !important;
+    width: 57%;
     position: absolute;
     right: 0;
     top: 50px;

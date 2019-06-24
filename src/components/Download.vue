@@ -26,7 +26,9 @@
               <td>{{item.size}}</td>
               <td>{{item.downloads}}</td>
               <td>{{item.update_time}}</td>
-              <td class="download-btn">Download</td>
+              <td class="download-btn">
+                <a href="/static/files/Catalog.pdf" download="Catalog of Xiantao Lijun Non-woven Products Co.,Ltd.pdf">Download</a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -140,6 +142,10 @@ created() {
       }
       .download-btn {
         cursor: pointer;
+        a,
+        a:hover {
+          text-decoration: none;
+        }
       }
     }
   }
