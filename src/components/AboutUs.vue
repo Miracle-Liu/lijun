@@ -2,7 +2,7 @@
 <template>
   <div class='about-us-container'>
     <div class="left">
-      <img src="../static/images/about_tu@2x.png" alt="" class="left-img">
+      <img src="../static/images/about_tu.png" alt="" class="left-img">
       <div class="auout-us-text">
         <ModuleTitle bg-text="ABOUT US" :title="$t('aboutUs.title')" />
         <div class="line"></div>
