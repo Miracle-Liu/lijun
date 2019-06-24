@@ -51,12 +51,6 @@ return {
 },
 computed: {},
 watch:{
-  $route(val){
-    let {path} = val
-    if(path =='/' || path =="/questions" || path=="/download"){
-      this.selectedIndex = 0
-    }
-  },
   lang(val){
     this.$i18n.locale = val;
   }
@@ -67,13 +61,17 @@ methods: {
       if(pos ==='aLi'){
         window.open('https://lijunchina.en.alibaba.com')
         return false
-      }else{
+      }else if(pos ==='connectUs'){
         let dom = document.querySelector(`#${pos}`)
-        if(dom){
-          dom.scrollIntoView({ behavior: "smooth" })
-        }else{
-          this.$router.push({path:'/',query:{pos}})
-        }
+        dom.scrollIntoView({ behavior: "smooth" })
+      }else{
+        this.$parent.contetntShow = 1
+        this.$nextTick(()=>{
+          let dom = document.querySelector(`#${pos}`)
+          if(dom){
+            dom.scrollIntoView({ behavior: "smooth" })
+          }
+        })
     }
   }
 },

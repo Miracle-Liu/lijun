@@ -104,12 +104,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     splitChunks: {
       chunks: 'all',
       cacheGroups: {
-        libs: {
-          name: 'chunk-libs',
-          test: /[\\/]node_modules[\\/]/,
-          priority: 10,
-          chunks: 'initial' // 只打包初始时依赖的第三方
-        },
         commons: {
           name: 'chunk-commons',
           test: resolve('src/components'), // 可自定义拓展你的规则
@@ -143,7 +137,7 @@ if (config.build.productionGzip) {
 
   webpackConfig.plugins.push(
     new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
+      filename: '[path].gz[query]',
       algorithm: 'gzip',
       test: new RegExp(
         '\\.(' + config.build.productionGzipExtensions.join('|') + ')$'

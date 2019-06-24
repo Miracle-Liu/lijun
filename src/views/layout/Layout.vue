@@ -1,8 +1,18 @@
 <template>
   <div class="lijun-layout">
 
-    <Head />
-    <router-view class="lijun-content" />
+    <Head id="head" ref="head" />
+    <div class="lijun-content">
+      <template v-if="contetntShow ===1">
+        <Home />
+      </template>
+      <template v-else-if="contetntShow ===2">
+        <Questions />
+      </template>
+      <template v-else>
+        <Download />
+      </template>
+    </div>
     <Footer id="connectUs" />
     <modals-container />
   </div>
@@ -10,16 +20,29 @@
 <script>
 import Head from '@/components/Head.vue'
 import Footer from '@/components/Footer.vue'
+import Home from '@/views/Home.vue'
+import Questions from '@/components/Questions.vue'
+import Download from '@/components/Download.vue'
 
 export default {
   name: "layout",
   components:{
     Head,
-    Footer
+    Footer,
+    Home,
+    Questions,
+    Download
   },
   data() {
     return {
+      contetntShow:1
     };
+  },
+  watch:{
+    contetntShow(val){
+      document.querySelector('#head').scrollIntoView({ behavior: "smooth" })
+      this.$refs.head.selectedIndex = 0;
+    }
   },
   created() {
   },

@@ -1,11 +1,10 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 
 import 'normalize.css/normalize.css'
 import App from './App'
-import router from './router'
-import store from './store'
+// import router from './router'
 import messages from './messages.js'
-import VueI18n from 'vue-i18n'
+// import VueI18n from 'vue-i18n'
 import vmodal from 'vue-js-modal'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -21,8 +20,7 @@ const i18n = new VueI18n({
 
 new Vue({
   el: '#app',
-  router,
+  // router,
   i18n,
-  store,
   render: h => h(App)
 })
