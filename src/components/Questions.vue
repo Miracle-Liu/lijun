@@ -56,6 +56,18 @@ return {
       ques:'faq.q5',
       ans:'faq.a5'
     },
+    {
+      ques:'faq.q6',
+      ans:'faq.a6'
+    },
+    {
+      ques:'faq.q7',
+      ans:'faq.a7'
+    },
+    {
+      ques:'faq.q8',
+      ans:'faq.a8'
+    },
   ]
 };
 },

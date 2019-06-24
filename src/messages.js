@@ -75,18 +75,22 @@ export default {
     faq: {
       commonQues: '常见问题类别',
       myzx: '贸易咨询',
-      q1: '您是制造商还是贸易公司?',
-      a1: '我们有自己的工厂生产这种产品。',
-      q2: '运输方法怎么样?',
-      a2: '特快/航空/海运。',
-      q3: '付款方式怎么样?',
-      a3:
-        '我们接受大额的电汇、信用证，小额的，您可以通过Paypal、西联汇款、速汇金、代管等方式付款。',
-      q4: '我可以订购一些样品进行测试吗?',
-      a4:
-        '当然，我们可以安排运费到付的方式给你样品，如果不是我们正常的印刷，你需要支付样品费用。',
-      q5: '你能定制我的特殊形状的急救箱吗?',
-      a5: '是的，我们做OEM和ODM。'
+      q1: '你们是工厂还是贸易商？',
+      a1: '我们是生产厂家，有自己的厂房，面积12000平方米。',
+      q2: '我可以拿免费样品吗？',
+      a2: '当然可以。',
+      q3: '你们有最小起订量和一个订单能混装吗？',
+      a3: '有最小起订量，能混装。',
+      q4: '你们发货时间多久？',
+      a4: '一个40高柜30天就可以出货。',
+      q5: '有哪些付款方式？',
+      a5: 'T/T和信用证。 贸易术语： FOB, CIF, C&F, EXW。',
+      q6: '你公司接受定制化服务吗？',
+      a6: '我们提供ODM/OEM。',
+      q7: '你公司有哪些认证？',
+      a7: 'ISO13485, CE, FDA和一些其他重要认证。',
+      q8: '你们QC团队怎样？',
+      a8: '我们严格按ISO体系生产和质检。 我们接受第三方验货。'
     },
     download: {
       title: '下载类别',
@@ -178,18 +182,24 @@ export default {
     faq: {
       commonQues: 'FAQ',
       myzx: 'Trade Consulting',
-      q1: 'Are you a manufacturer or a trading company?',
-      a1: 'We have our own factory to produce this product.',
-      q2: 'How about transportation?',
-      a2: 'Express/air/sea freight.',
-      q3: 'What about the terms of payment?',
-      a3:
-        'We accept large amount telegraphic transfer, letter of credit.For small amount, you can pay by Paypal, western union, moneygram, escrow, etc.',
-      q4: 'Can I order some samples for testing?',
-      a4:
-        'Of course, we can arrange freight collect to give you the sample, if not our normal printing, you need to pay the sample fee.',
-      q5: 'Can you customize my special shaped first aid kit?',
-      a5: 'Yes, we do OEM and ODM.'
+      q1: 'Are you a Manufacturer or a Trading company?',
+      a1:
+        'We are manufacturer with our own factory. We have total 12000 square meter non-woven factory.',
+      q2: 'May I have free sample?',
+      a2: 'Of course.',
+      q3: 'Do you have MOQ and can mix many kinds in one order?',
+      a3: 'Mini order can be accept and mix shipping permitted.',
+      q4: "What's your delivery time?",
+      a4: 'The best time 30days for one 40 HQ container.',
+      q5: 'What payment you can accept?',
+      a5: 'T/T,L/C. Trade term: FOB,CIF,C&F,EXW.',
+      q6: 'Does you company accept customization?',
+      a6: 'ODM/OEM is available.',
+      q7: 'How about your company certification?',
+      a7: 'ISO13485 ,CE,FDA and other necessary certification.',
+      q8: "How's your QC system?",
+      a8:
+        'We have full time QA and strict quality system.3rd part product inspection is acceptable.'
     },
     download: {
       title: 'Download Category',
