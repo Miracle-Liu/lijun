@@ -2,7 +2,7 @@
 
 import 'normalize.css/normalize.css'
 import App from './App'
-// import router from './router'
+import router from './router'
 import messages from './messages.js'
 // import VueI18n from 'vue-i18n'
 import vmodal from 'vue-js-modal'
@@ -20,7 +20,7 @@ const i18n = new VueI18n({
 
 new Vue({
   el: '#app',
-  // router,
+  router,
   i18n,
   render: h => h(App)
 })

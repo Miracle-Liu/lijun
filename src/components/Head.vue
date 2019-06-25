@@ -65,19 +65,26 @@ methods: {
         let dom = document.querySelector(`#${pos}`)
         dom.scrollIntoView({ behavior: "smooth" })
       }else{
-        this.$parent.contetntShow = 1
-        this.$nextTick(()=>{
-          let dom = document.querySelector(`#${pos}`)
-          if(dom){
-            dom.scrollIntoView({ behavior: "smooth" })
-          }
-        })
+        let dom = document.querySelector(`#${pos}`)
+        if(dom){
+           dom.scrollIntoView({ behavior: "smooth" })
+        }else{
+          this.$router.push({path:'/',query:{pos}})
+        }
+
     }
   }
 },
 
 created() {
   this.lang = this.$i18n.locale;
+  let {pos} = this.$route.query
+  if(pos === 'qualityGoods'){
+      this.selectedIndex=2
+  }
+  if(pos === 'knowUs'){
+    this.selectedIndex=1
+  }
 },
 }
 </script>

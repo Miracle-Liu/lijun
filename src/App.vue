@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <Layout />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Layout from "@/views/layout/Layout.vue"
 export default {
   name: "App",
   components:{
-    Layout
   },
   created() {
     const lang = navigator.systemLanguage

@@ -14,7 +14,7 @@
           <dl>
             <dt class="title">{{$t('aboutUs.title')}}</dt>
             <dd class="line"></dd>
-            <dd v-for="(item,index) in usList" style="cursor: pointer;" @click="jumper(index)">{{$t(item.name)}}</dd>
+            <dd v-for="(item,index) in usList" style="cursor: pointer;" @click="jumper(item.href)">{{$t(item.name)}}</dd>
           </dl>
         </div>
         <div class="divide"></div>
@@ -96,8 +96,8 @@ export default {
         }
     },
     methods:{
-      jumper(index){
-        this.$parent.contetntShow = index + 2
+      jumper(path){
+        this.$router.push({path})
       },
       jumperGoods(path){
         window.open(path)
