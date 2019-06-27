@@ -1,8 +1,10 @@
 <template>
-  <div class="lijun-home">
+  <div class="lijun-questions">
 
     <Head />
-    <Questions />
+    <div class="lijun-content">
+      <Questions />
+    </div>
     <Footer id="connectUs" />
   </div>
 </template>
@@ -30,7 +32,13 @@ export default {
 };
 </script>
 <style lang="scss">
-.lijun-home {
+.lijun-questions {
+  width: 100%;
+  height: 100%;
+  .lijun-content {
+    min-height: calc(100% - 730px);
+    width: 100%;
+  }
 }
 </style>
 

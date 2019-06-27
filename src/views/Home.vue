@@ -2,10 +2,12 @@
   <div class="lijun-home">
 
     <Head />
-    <Banner />
-    <KnowUs id="knowUs" />
-    <QualityGoods id="qualityGoods" />
-    <AboutUs />
+    <div class="lijun-content">
+      <Banner />
+      <KnowUs id="knowUs" />
+      <QualityGoods id="qualityGoods" />
+      <AboutUs />
+    </div>
     <Footer id="connectUs" />
     <modals-container />
   </div>
@@ -48,6 +50,28 @@ export default {
 </script>
 <style lang="scss">
 .lijun-home {
+  width: 100%;
+  height: 100%;
+  .lijun-content {
+    min-height: calc(100% - 730px);
+    width: 100%;
+  }
+  .slick-dots li button::before {
+    color: #fff;
+  }
+  .slick-dots li.slick-active button::before {
+    color: #0092fe;
+  }
+  .v--modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .v--modal-box {
+    width: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: inherit !important;
+    z-index: 100000;
+  }
 }
 </style>
 
