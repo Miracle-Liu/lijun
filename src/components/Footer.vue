@@ -89,9 +89,8 @@ export default {
               {name:"goods.syf",href:"https://lijunchina.en.alibaba.com/productgrouplist-209761250/Surgical_Gown.html?spm=a2700.icbuShop.74.3.221fbd1alQbcFk"},
               {name:"goods.gly",href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
               {name:"goods.xt",href:"https://lijunchina.en.alibaba.com/productgrouplist-221837001/Disposable_Shoe_Cover.html?spm=a2700.icbuShop.74.20.221fbd1alQbcFk"},
-              {name:"goods.qt",href:"'https://lijunchina.en.alibaba.com'"},
+              {name:"goods.qt",href:"https://lijunchina.en.alibaba.com"},
             ],
-
 
         }
     },

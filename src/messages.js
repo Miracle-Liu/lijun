@@ -33,7 +33,8 @@ export default {
       ym: '圆帽',
       kz: '口罩',
       xt: '鞋套',
-      sycp: '所有产品'
+      sycp: '所有产品',
+      others: '其他'
     },
     aboutUs: {
       title: '关于我们',
@@ -138,7 +139,8 @@ export default {
       ym: 'round caps',
       kz: 'disposable face mask',
       xt: 'shoe cover',
-      sycp: 'All Goods'
+      sycp: 'All Goods',
+      others: 'others'
     },
     aboutUs: {
       title: 'About Us',
