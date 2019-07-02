@@ -120,7 +120,12 @@ export default {
       jxhb: '·Selected environment-friendly non-woven fabrics',
       ltcj: '·Exquisite three-dimensional cutting technology',
       mfsj: '·Design samples are provided free of charge',
-      cpfd: '·A wide variety of products'
+      cpfd: '·A wide variety of products',
+      p: 'PROFESSIONAL',
+      m: 'MANUFACTURER',
+      od: 'OF DISPOSABLE',
+      n: 'nonwoven',
+      c: 'coverall'
     },
     knowUs: {
       title: 'Know About Us',

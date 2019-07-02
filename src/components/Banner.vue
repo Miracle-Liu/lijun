@@ -1,71 +1,196 @@
 <!-- Banner -->
 <template>
-  <div class='banner-container'>
-    <div class="content container">
-      <div class="title">{{$t("banner.pzyl")}}</div>
-      <div class="des">{{$t("banner.jxhb")}}</div>
-      <div class="des">{{$t("banner.ltcj")}}</div>
-      <div class="des">{{$t("banner.mfsj")}}</div>
-      <div class="des">{{$t("banner.cpfd")}}</div>
+  <slick ref="slick" :options="slickOptions" class="slick-banner-container">
+    <div class='banner-container item1'>
+      <div class="content container">
+        <div class="title">{{$t("banner.pzyl")}}</div>
+        <div class="des">{{$t("banner.jxhb")}}</div>
+        <div class="des">{{$t("banner.ltcj")}}</div>
+        <div class="des">{{$t("banner.mfsj")}}</div>
+        <div class="des">{{$t("banner.cpfd")}}</div>
+      </div>
     </div>
-  </div>
+    <div class='banner-container item2'>
+      <div class="content container">
+        <template v-if="lang==='cn'">
+          <div class="title" style="color:rgba(33, 132, 228, 1);margin-bottom:20px;">一次性用品专业制造商</div>
+          <div class="des" style="font-size:70px;">非织造布工作服</div>
+        </template>
+        <template v-else>
+          <div style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
+          <div style="color:rgba(33, 132, 228, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
+          <div style="color:#fff;font-size:30px;margin-top:-10px;font-family:Impact;">OF DISPOSABLE</div>
+          <div style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">nonwoven</div>
+          <div style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">coverall</div>
+        </template>
+        <div class="icons">
+          <div class="icon">
+            <img src="../static/images/logo1@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">TYPE3</div>
+          </div>
+          <div class="icon">
+            <img src="../static/images/logo2@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">TYPE4</div>
+          </div>
+          <div class="icon">
+            <img src="../static/images/logo3@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">TYPE5</div>
+          </div>
+          <div class="icon">
+            <img src="../static/images/logo4@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">TYPE6</div>
+          </div>
+          <div class="icon">
+            <img src="../static/images/logo5@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">EN1149-1</div>
+          </div>
+          <div class="icon">
+            <img src="../static/images/logo6@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">EN14126</div>
+          </div>
+          <div class="icon">
+            <img src="../static/images/logo7@2x.png" style="width:63px;height:63px;" alt="">
+            <div class="text">EN1073-2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='banner-container item3'>
+      <div class="content container" style="text-align:right;">
+        <template v-if="lang==='cn'">
+          <div class="title" style="color:rgba(0, 86, 166, 1);">专业制造商</div>
+        </template>
+        <template v-else>
+          <div style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
+          <div style="color:rgba(0, 86, 166, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
+        </template>
+      </div>
+    </div>
+  </slick>
+
 </template>
 
 <script>
-
+import Slick from 'vue-slick';
 export default {
-components: {},
+components: {Slick},
 props: {},
 data() {
 return {
-
+    slickOptions: {
+      slidesToShow: 1,
+      // accessibility: true,
+      autoplay: false,
+      autoplaySpeed: 1000,
+      arrows: true,
+      dots: true
+      // Any other options that can be got from plugin documentation
+    },
 };
 },
-computed: {},
+computed: {
+  lang(){
+    return this.$i18n.locale
+  }
+},
 watch: {},
 methods: {
+    next() {
+      this.$refs.slick.next();
+    },
 
+    prev() {
+      this.$refs.slick.prev();
+    },
+    reInit() {
+      // Helpful if you have to deal with v-for to update dynamic lists
+      this.$nextTick(() => {
+        this.$refs.slick.reSlick();
+      });
+    },
 },
 created() {
 
 },
 }
 </script>
-<style lang='scss'>
+<style lang='scss' >
 //@import url(); 引入公共css类
-.banner-container {
+.slick-banner-container {
   width: 100%;
-  height: 0;
-  padding-bottom: 25%;
-  position: relative;
-  @media screen and (max-width: 1920px) {
-    background: url("../static/images/banner.png") no-repeat;
-    background-size: 100%;
+  overflow: hidden;
+  .slick-prev,
+  .slick-next {
+    z-index: 999;
   }
-  @media screen and (min-width: 1920px) {
-    background: url("../static/images/banner@2x.png") no-repeat;
-    background-size: 100%;
+  .slick-prev {
+    left: 25px;
   }
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: rgba(255, 255, 255, 1);
-    transform: translate(-50%, -50%);
-    padding: 0;
-    .title {
-      font-size: 60px;
-      font-family: SourceHanSansCN-Bold;
-      font-weight: bold;
-      margin-bottom: 30px;
+  .slick-next {
+    right: 25px;
+  }
+  .banner-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 25%;
+    position: relative;
+    &.item1 {
+      @media screen and (max-width: 1920px) {
+        background: url("../static/images/banner.png") no-repeat;
+        background-size: 100%;
+      }
+      @media screen and (min-width: 1920px) {
+        background: url("../static/images/banner@2x.png") no-repeat;
+        background-size: 100%;
+      }
     }
-    .des {
-      font-size: 20px;
-      font-family: PingFangSC-Regular;
-      font-weight: 400;
-      margin-bottom: 18px;
-      &:last-of-type {
-        margin-bottom: 0;
+    &.item2 {
+      background: url("../static/images/banner2.png") no-repeat;
+      background-size: 100%;
+    }
+    &.item3 {
+      background: url("../static/images/banner3.png") no-repeat;
+      background-size: 100%;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: rgba(255, 255, 255, 1);
+      transform: translate(-50%, -50%);
+      padding: 0;
+      .title {
+        font-size: 60px;
+        font-family: SourceHanSansCN-Bold;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      .des {
+        font-size: 20px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        margin-bottom: 18px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      .icons {
+        overflow: hidden;
+        .icon {
+          float: left;
+          text-align: center;
+          margin-right: 8px;
+          img {
+            display: block;
+          }
+          .text {
+            font-size: 14px;
+            font-family: SFProText-Medium;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 1);
+            margin-top: 10px;
+          }
+        }
       }
     }
   }
