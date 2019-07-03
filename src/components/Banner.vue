@@ -81,7 +81,7 @@ return {
       slidesToShow: 1,
       // accessibility: true,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 3000,
       arrows: true,
       dots: true
       // Any other options that can be got from plugin documentation
