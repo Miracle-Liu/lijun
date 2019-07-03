@@ -1,73 +1,143 @@
 <!-- Banner -->
 <template>
-  <slick ref="slick" :options="slickOptions" class="slick-banner-container">
-    <div class='banner-container item1'>
-      <div class="content container">
-        <div class="title">{{$t("banner.pzyl")}}</div>
-        <div class="des">{{$t("banner.jxhb")}}</div>
-        <div class="des">{{$t("banner.ltcj")}}</div>
-        <div class="des">{{$t("banner.mfsj")}}</div>
-        <div class="des">{{$t("banner.cpfd")}}</div>
+  <div>
+    <slick ref="slick" :options="slickOptions" class="slick-banner-container" v-if="lang==='cn'">
+      <div class='banner-container item1'>
+        <div class="content container">
+          <div class="title">品质优良 诚信创新</div>
+          <div class="des">· 精选环保无纺布料</div>
+          <div class="des">· 立体裁剪精湛工艺</div>
+          <div class="des">· 免费提供设计样板</div>
+          <div class="des">· 产品种类繁多</div>
+        </div>
       </div>
-    </div>
-    <div class='banner-container item2'>
-      <div class="content container">
-        <template v-if="lang==='cn'">
-          <div class="title" style="color:rgba(33, 132, 228, 1);margin-bottom:20px;">一次性用品专业制造商</div>
-          <div class="des" style="font-size:70px;">非织造布工作服</div>
-        </template>
-        <template v-else>
-          <div style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
-          <div style="color:rgba(33, 132, 228, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
-          <div style="color:#fff;font-size:30px;margin-top:-10px;font-family:Impact;">OF DISPOSABLE</div>
-          <div style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">nonwoven</div>
-          <div style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">coverall</div>
-        </template>
-        <div class="icons">
-          <div class="icon">
-            <img src="../static/images/logo1@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">TYPE3</div>
-          </div>
-          <div class="icon">
-            <img src="../static/images/logo2@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">TYPE4</div>
-          </div>
-          <div class="icon">
-            <img src="../static/images/logo3@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">TYPE5</div>
-          </div>
-          <div class="icon">
-            <img src="../static/images/logo4@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">TYPE6</div>
-          </div>
-          <div class="icon">
-            <img src="../static/images/logo5@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">EN1149-1</div>
-          </div>
-          <div class="icon">
-            <img src="../static/images/logo6@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">EN14126</div>
-          </div>
-          <div class="icon">
-            <img src="../static/images/logo7@2x.png" style="width:63px;height:63px;" alt="">
-            <div class="text">EN1073-2</div>
+      <div class='banner-container item2'>
+        <div class="content container">
+          <template v-if="lang==='cn'">
+            <div class="title p" style="color:rgba(33, 132, 228, 1);margin-bottom:20px;">一次性用品专业制造商</div>
+            <div class="des n" style="font-size:70px;">非织造布工作服</div>
+          </template>
+          <template v-else>
+            <div class="p" style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
+            <div class="m" style="color:rgba(33, 132, 228, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
+            <div class="d" style="color:#fff;font-size:30px;margin-top:-10px;font-family:Impact;">OF DISPOSABLE</div>
+            <div class="n" style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">nonwoven</div>
+            <div class="c" style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">coverall</div>
+          </template>
+          <div class="icons">
+            <div class="icon">
+              <img src="../static/images/logo1@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE3</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo2@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE4</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo3@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE5</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo4@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE6</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo5@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">EN1149-1</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo6@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">EN14126</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo7@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">EN1073-2</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class='banner-container item3'>
-      <div class="content container" style="text-align:right;">
-        <template v-if="lang==='cn'">
-          <div class="title" style="color:rgba(0, 86, 166, 1);">专业制造商</div>
-        </template>
-        <template v-else>
-          <div style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
-          <div style="color:rgba(0, 86, 166, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
-        </template>
+      <div class='banner-container item3'>
+        <div class="content container" style="text-align:right;">
+          <template v-if="lang==='cn'">
+            <div class="title" style="color:rgba(0, 86, 166, 1);">专业</div>
+            <div class="title" style="color:rgba(0, 86, 166, 1);margin-top:-20px;">制造商</div>
+          </template>
+          <template v-else>
+            <div style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
+            <div style="color:rgba(0, 86, 166, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
+          </template>
+        </div>
       </div>
-    </div>
-  </slick>
-
+    </slick>
+    <slick ref="slick" :options="slickOptions" class="slick-banner-container demo" v-else>
+      <div class='banner-container item1'>
+        <div class="content container">
+          <div class="title">Good quality credit innovation</div>
+          <div class="des">·Selected environment-friendly non-woven fabrics</div>
+          <div class="des">·Exquisite three-dimensional cutting technology</div>
+          <div class="des">·Design samples are provided free of charge</div>
+          <div class="des">·A wide variety of products</div>
+        </div>
+      </div>
+      <div class='banner-container item2'>
+        <div class="content container">
+          <template v-if="lang==='cn'">
+            <div class="title p" style="color:rgba(33, 132, 228, 1);margin-bottom:20px;">一次性用品专业制造商</div>
+            <div class="des n" style="font-size:70px;">非织造布工作服</div>
+          </template>
+          <template v-else>
+            <div class="p" style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
+            <div class="m" style="color:rgba(33, 132, 228, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
+            <div class="d" style="color:#fff;font-size:30px;margin-top:-10px;font-family:Impact;">OF DISPOSABLE</div>
+            <div class="n" style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">nonwoven</div>
+            <div class="c" style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">coverall</div>
+          </template>
+          <div class="icons">
+            <div class="icon">
+              <img src="../static/images/logo1@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE3</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo2@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE4</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo3@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE5</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo4@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">TYPE6</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo5@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">EN1149-1</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo6@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">EN14126</div>
+            </div>
+            <div class="icon">
+              <img src="../static/images/logo7@2x.png" style="width:63px;height:63px;" alt="">
+              <div class="text">EN1073-2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='banner-container item3'>
+        <div class="content container" style="text-align:right;">
+          <template v-if="lang==='cn'">
+            <div class="title" style="color:rgba(0, 86, 166, 1);">专业</div>
+            <div class="title" style="color:rgba(0, 86, 166, 1);margin-top:-20px;">制造商</div>
+          </template>
+          <template v-else>
+            <div style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
+            <div style="color:rgba(0, 86, 166, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
+          </template>
+        </div>
+      </div>
+    </slick>
+  </div>
 </template>
 
 <script>
@@ -90,6 +160,7 @@ return {
 },
 computed: {
   lang(){
+    this.reInit()
     return this.$i18n.locale
   }
 },
@@ -147,6 +218,36 @@ created() {
     &.item2 {
       background: url("../static/images/banner2.png") no-repeat;
       background-size: 100%;
+      @media screen and (max-width: 1200px) {
+        .content {
+          .p,
+          .m {
+            font-size: 40px !important;
+          }
+          .m {
+            margin-top: -10px !important;
+          }
+          .d {
+            margin-top: 0 !important;
+          }
+          .n,
+          .c {
+            font-size: 50px !important;
+          }
+          .n {
+            margin-top: 0 !important;
+          }
+          .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+              width: 30px !important;
+              height: 30px !important;
+            }
+          }
+        }
+      }
     }
     &.item3 {
       background: url("../static/images/banner3.png") no-repeat;
