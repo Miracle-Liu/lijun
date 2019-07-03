@@ -80,7 +80,7 @@ return {
     slickOptions: {
       slidesToShow: 1,
       // accessibility: true,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 1000,
       arrows: true,
       dots: true
