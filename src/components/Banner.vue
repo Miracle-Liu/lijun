@@ -14,8 +14,8 @@
       <div class='banner-container item2'>
         <div class="content container">
           <template v-if="lang==='cn'">
-            <div class="title p" style="color:rgba(33, 132, 228, 1);margin-bottom:20px;">一次性用品专业制造商</div>
-            <div class="des n" style="font-size:70px;">非织造布工作服</div>
+            <div class="title p" style="color:rgba(33, 132, 228, 1);font-size:50px;margin-bottom:20px;">一次性用品专业制造商</div>
+            <div class="des n" style="font-size:50px;">非织造布工作服</div>
           </template>
           <template v-else>
             <div class="p" style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
@@ -86,11 +86,11 @@
             <div class="des n" style="font-size:70px;">非织造布工作服</div>
           </template>
           <template v-else>
-            <div class="p" style="color:rgba(0, 86, 166, 1);font-size:60px;font-family:Impact;">PROFESSIONAL</div>
-            <div class="m" style="color:rgba(33, 132, 228, 1);font-size:60px;margin-top:-20px;font-family:Impact;">MANUFACTURER</div>
-            <div class="d" style="color:#fff;font-size:30px;margin-top:-10px;font-family:Impact;">OF DISPOSABLE</div>
-            <div class="n" style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">nonwoven</div>
-            <div class="c" style="color:#fff;font-size:70px;margin-top:-15px;font-family:Impact;">coverall</div>
+            <div class="p" style="color:rgba(0, 86, 166, 1);font-size:50px;font-family:Impact;">PROFESSIONAL</div>
+            <div class="m" style="color:rgba(33, 132, 228, 1);font-size:50px;margin-top:-10px;font-family:Impact;">MANUFACTURER</div>
+            <div class="d" style="color:#fff;font-size:30px;margin-top:5px;font-family:Impact;">OF DISPOSABLE</div>
+            <div class="n" style="color:#fff;font-size:50px;margin-top:-10px;font-family:Impact;">nonwoven</div>
+            <div class="c" style="color:#fff;font-size:50px;margin-top:-15px;font-family:Impact;">coverall</div>
           </template>
           <div class="icons">
             <div class="icon">
