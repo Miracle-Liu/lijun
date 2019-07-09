@@ -1,26 +1,11 @@
 
 <template>
   <div class="khlf">
-    <slick
-      ref="slick"
-      :options="slickOptions"
-    >
-      <img
-        src="../assets/img/qyzz/qy_1.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/qyzz/qy_2.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/qyzz/qy_3.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/qyzz/qy_4.png"
-        alt=""
-      >
+    <slick ref="slick" :options="slickOptions">
+      <img src="../assets/img/qyzz/qy_1.jpg" alt="">
+      <img src="../assets/img/qyzz/qy_2.jpg" alt="">
+      <img src="../assets/img/qyzz/qy_3.jpg" alt="">
+      <img src="../assets/img/qyzz/qy_4.jpg" alt="">
 
     </slick>
   </div>
