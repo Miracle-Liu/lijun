@@ -1,11 +1,8 @@
 
 <template>
   <div class="cjzs">
-    <slick
-      ref="slick"
-      :options="slickOptions"
-    >
-      <img
+    <slick ref="slick" :options="slickOptions">
+      <!-- <img
         src="../assets/img/chejian/cj_1.png"
         alt=""
       >
@@ -16,35 +13,14 @@
       <img
         src="../assets/img/chejian/cj_3.png"
         alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_4.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_5.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_7.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_8.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_9.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_10.png"
-        alt=""
-      >
-      <img
-        src="../assets/img/chejian/cj_11.png"
-        alt=""
-      >
+      > -->
+      <img src="../assets/img/chejian/cj_4.png" alt="">
+      <img src="../assets/img/chejian/cj_5.png" alt="">
+      <img src="../assets/img/chejian/cj_7.png" alt="">
+      <img src="../assets/img/chejian/cj_8.png" alt="">
+      <img src="../assets/img/chejian/cj_9.png" alt="">
+      <img src="../assets/img/chejian/cj_10.png" alt="">
+      <img src="../assets/img/chejian/cj_11.png" alt="">
 
     </slick>
   </div>
