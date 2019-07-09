@@ -218,7 +218,7 @@ created() {
     &.item2 {
       background: url("../static/images/banner2.png") no-repeat;
       background-size: 100%;
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1500px) {
         .content {
           .p,
           .m {
