@@ -41,8 +41,8 @@ return {
     {img:goods4,title:'ym',href:"https://lijunchina.en.alibaba.com/productgrouplist-221938712/Disposable_Cap.html?spm=a2700.icbuShop.74.18.221fbd1alQbcFk"},
     {img:goods5,title:'kz',href:"https://lijunchina.en.alibaba.com/productgrouplist-221936750/Disposable_Face_Mask.html?spm=a2700.icbuShop.74.19.221fbd1alQbcFk"},
     {img:goods6,title:'xt',href:"https://lijunchina.en.alibaba.com/productgrouplist-221837001/Disposable_Shoe_Cover.html?spm=a2700.icbuShop.74.20.221fbd1alQbcFk"},
-    {img:goods7,title:'fhf',href:'https://lijunchina.en.alibaba.com/productgrouplist-209714929/Protective_Suit.html?spm=a2700.icbuShop.74.2.221fbd1alQbcFk'},
-    {img:goods8,title:'gly',href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
+    {img:goods7,title:'t56',href:'https://lijunchina.en.alibaba.com/productgrouplist-209714929/Protective_Suit.html?spm=a2700.icbuShop.74.2.221fbd1alQbcFk'},
+    {img:goods8,title:'syf',href:"https://lijunchina.en.alibaba.com/productgrouplist-806860678/Isolation_Gown.html?spm=a2700.icbuShop.74.4.221fbd1alQbcFk"},
     {img:goods9,title:'others',href:"https://lijunchina.en.alibaba.com"},
   ]
 };

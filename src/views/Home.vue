@@ -63,7 +63,8 @@ export default {
     color: #0092fe;
   }
   .v--modal-overlay {
-    background: rgba(0, 0, 0, 0.8);
+    // background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
   }
   .v--modal-box {
     width: 100% !important;

@@ -19,7 +19,7 @@ export default {
     knowUs: {
       title: '了解我们',
       cjzs: '车间展示',
-      ygjs: '员工介绍',
+      ygjs: '员工活动',
       khlf: '客户来访',
       qyzz: '企业资质'
     },
@@ -27,14 +27,16 @@ export default {
       title: '优质产品',
       slogan:
         '我们主打产品包括口罩，帽子，防护服，隔离衣，手术衣，鞋套，袖套，手套，床单等。',
-      fhf: '防化服',
-      wklf: '外科礼服',
+      fhf: '防护服',
+      wklf: '手术衣',
       gly: '隔离衣',
       ym: '圆帽',
       kz: '口罩',
       xt: '鞋套',
       sycp: '所有产品',
-      others: '其他'
+      others: '其他',
+      t56: 'TYPE 5/6 防护服',
+      syf: '实验服'
     },
     aboutUs: {
       title: '关于我们',
@@ -130,7 +132,7 @@ export default {
     knowUs: {
       title: 'Know About Us',
       cjzs: 'Workshop Show',
-      ygjs: 'Employee Referrals',
+      ygjs: 'Employee Activity',
       khlf: 'Entertaining Customer',
       qyzz: 'Enterprise Qualification'
     },
@@ -145,7 +147,9 @@ export default {
       kz: 'disposable face mask',
       xt: 'shoe cover',
       sycp: 'All Goods',
-      others: 'others'
+      others: 'others',
+      t56: 'TYPE 5/6 Coverall',
+      syf: 'Lab Coat'
     },
     aboutUs: {
       title: 'About Us',

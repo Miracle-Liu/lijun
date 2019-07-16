@@ -6,7 +6,6 @@
       <img src="../assets/img/qyzz/qy_2.jpg" alt="">
       <img src="../assets/img/qyzz/qy_3.jpg" alt="">
       <img src="../assets/img/qyzz/qy_4.jpg" alt="">
-
     </slick>
   </div>
 </template>
@@ -24,7 +23,7 @@ export default {
   data() {
     return {
       slickOptions: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         // accessibility: true,
         autoplay: true,
         autoplaySpeed: 1000,
