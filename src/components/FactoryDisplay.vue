@@ -35,8 +35,8 @@ created() {
 <style lang='scss'>
 //@import url(); 引入公共css类
 .factory-display-container {
-  width: 1180px;
-  height: 680px;
+  width: 590px;
+  height: 340px;
   margin: 0 auto;
   padding: 20px;
   background-color: #9ac5d6;

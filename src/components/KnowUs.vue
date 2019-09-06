@@ -105,7 +105,7 @@ created() {
   }
   .content {
     width: 100%;
-    height: 840px;
+    height: 500px;
     background-color: #bfdbe6;
     padding-top: 80px;
   }
