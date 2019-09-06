@@ -206,14 +206,8 @@ created() {
     padding-bottom: 25%;
     position: relative;
     &.item1 {
-      @media screen and (max-width: 1920px) {
-        background: url("../static/images/banner.png") no-repeat;
-        background-size: 100%;
-      }
-      @media screen and (min-width: 1920px) {
-        background: url("../static/images/banner@2x.png") no-repeat;
-        background-size: 100%;
-      }
+      background: url("../static/images/banner.png") no-repeat;
+      background-size: 100%;
     }
     &.item2 {
       background: url("../static/images/banner2.png") no-repeat;
